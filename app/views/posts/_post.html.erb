@@ -1,0 +1,14 @@
+<div class="card" id=<%= dom_id(post)%>>
+  <div class="card-body">
+    <p>
+      <%= post.title%>
+    </p>
+    <p>
+      <%= post.description%>
+    </p>
+
+    <%= link_to 'Show', post %>
+    <%= link_to 'Edit', edit_post_path(post) %>
+    <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>

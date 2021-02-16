@@ -1,0 +1,22 @@
+
+<ul class=" navbar-nav mr-auto">
+  <li class="nav-link">
+    <div class="btn-group">
+      <button type="button" class="btn btn-dark notification-icon"
+       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="badge">
+          <i class="fa fa-bell fa-2x">notifications.count</i>
+        </span>
+      </button>
+
+
+      <%= turbo_frame_tag  "notifications" do %>
+        <div class="dropdown-menu">
+          <div id="notifications">
+            <%=render  notifications %>
+          </div>
+        </div>
+      <%end%>
+
+  </li>
+</ul>
